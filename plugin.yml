@@ -1,0 +1,12 @@
+name: MagicWord
+version: 1.0
+description: Bukkit plugin to automatically group bPermissions users when they enter a password
+author: md_5
+website: https://github.com/md-5/MagicWord
+
+main: com.md_5.magicword.MagicWord
+depend: [bPermissions]
+
+commands:
+    words:
+        description: Say the magic word.

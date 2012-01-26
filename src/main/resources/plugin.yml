@@ -1,0 +1,33 @@
+name: VanishCuboid
+version: 1.0
+description: Bukkit plugin to vanish a selected cuboid when its redstone state changes
+author: md_5
+website: https://github.com/md-5/VanishCuboid
+
+main: com.md_5.vanishcuboid.VanishCuboid
+
+commands:
+    vc:
+        description: Commands related to vanishing cuboids.
+        
+permissions:
+    vanishcuboid.*:
+        description: All user and admin functionality.
+        default: op
+        children:
+            deadbolt.user.*: true
+            deadbolt.admin.*: true
+    
+    vanishcuboid.admin.*:
+        description: All admin functionality
+        default: op
+        children:
+              vanishcuboid.remove.others: true
+              vanishcuboid.create.admin: true
+    
+    vanishcuboid.remove.others:
+        description: Remove cuboids belonging to others
+        default: op
+    vanishcuboid.create.admin:
+        description: Cuboids that restore all blocks.
+        default: op
